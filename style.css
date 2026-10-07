@@ -1,5 +1,6 @@
 body {
     padding-top: 100px;
+    background-color: rgb(166, 212, 174);
 }
 
 
@@ -136,7 +137,6 @@ nav a:visited {
     /* width: 80%; */
 }
 
-
 .homeproject {
     position: static;
     display: block;
@@ -159,3 +159,83 @@ img.homeproject {
 #catropolis, #searchengine { left: 42%; }
 
 #captybara, #hiddenfigirlines { left: 59%; }
+
+
+/* languages and frameworks on homepage */
+.beltsection {
+    position: relative;
+}
+
+.conveyerbelt {
+    display: block;
+    width: 100%;
+    z-index: 1;
+}
+
+.belttext {
+    position: absolute;
+    top: 5%;
+    left: 10%;
+    width: 40%;
+    /* text-align: center; */
+    color: black;
+    margin: 0;
+    z-index: 2;
+}
+
+.belttext p {
+    width: 70%;
+}
+
+.belttext h2 {
+    font-size: 45px;
+    width: 40%;
+}
+
+.jarcontainer {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 10%;
+    overflow: hidden;
+    z-index: 2;
+}
+
+.jartrack {
+    display: flex;
+    align-items: flex-end;
+    width: max-content;
+    animation: scroll 35s linear infinite;
+}
+
+.jar {
+    flex-shrink: 0;
+    width: 14vw;
+    margin-right: 3vw;
+    text-align: center;
+}
+
+.jar img {
+    width: 100%;
+    display: block;
+}
+
+.jar p {
+    text-shadow: 
+    0 0 7px #fff,
+    
+    0 0 10px rgb(255, 241, 119),
+    0 0 21px rgb(255, 241, 119),
+    
+    0 0 42px rgb(255, 241, 119),
+    0 0 92px rgb(255, 241, 119);
+}
+
+@keyframes scroll {
+    from { transform: translateX(0); }
+    to   { transform: translateX(-50%); }
+}
+
+.jartrack:hover {
+    animation-play-state: paused;
+}
