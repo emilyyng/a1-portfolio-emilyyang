@@ -1,3 +1,8 @@
+body {
+    padding-top: 210px;
+}
+
+
 /* navbar */
 nav {
     position: fixed;
@@ -5,6 +10,7 @@ nav {
     left: 0%;
     width: 100vw;
     box-sizing: border-box;
+    z-index: 100;
 
     display: flex;
     /* align-items: center; */
@@ -32,3 +38,98 @@ nav a {
 nav a:visited {
     color: black;
 }
+
+/* my projects on homepage */
+.projectsection {
+    display: flex;
+    align-items: flex-end;
+}
+
+.chalkboardcontainer {
+    position: relative;
+    width: 35%;
+    /* background-color: red; */
+}
+
+.chalkboardcontainer h2 {
+    position: absolute;
+    top: 30%;
+    left: 15%;
+    right: 0;
+    margin: 0;
+    text-align: center;
+    color: white;  
+    font-size: 45px;
+    width: 40%;
+    display: flex;
+    justify-content: center;
+}
+
+.chalkboard {
+    display: block;
+    width: 75%;
+    z-index: 1;
+}
+
+.shelfcontainer {
+    /* background-color: red; */
+    position: relative;
+    width: 65%;
+    display: flex;
+    justify-content: center;
+}
+
+.catshelf {
+    display: block;
+    width: 75%;
+    z-index: 1;
+}
+
+.projects {
+    position: absolute;
+    inset: 0;
+}
+
+.project {
+    position: absolute;
+    width: 15%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    /* background-color: black; */
+    align-items: center;
+    text-align: center;
+    z-index: 2;
+}
+
+.project p {
+    background-color: white;
+    padding: 10px;
+    border-radius: 10px;
+    font-size: 18px;
+    /* width: 80%; */
+}
+
+
+.homeproject {
+    position: static;
+    display: block;
+}
+
+img.homeproject {
+    width: 100%;
+}
+
+#wics, #catropolis, #captybara {
+    bottom: 41%;
+}
+
+#rooted, #searchengine, #hiddenfigirlines {
+    bottom: 9%;
+}
+
+#wics, #rooted { left: 25%; }
+
+#catropolis, #searchengine { left: 42%; }
+
+#captybara, #hiddenfigirlines { left: 59%; }
