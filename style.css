@@ -1,5 +1,5 @@
 body {
-    padding-top: 210px;
+    padding-top: 100px;
 }
 
 
@@ -37,6 +37,32 @@ nav a {
 
 nav a:visited {
     color: black;
+}
+
+/* hero on homepage */
+.hero {
+    display: flex;
+    justify-content: center;
+}
+
+.hero h1 {
+    position: absolute;
+    top: 28%;
+    font-size: 80px;
+    color: rgb(14, 23, 93);
+
+    text-shadow: 
+    0 0 7px #fff,
+    
+    0 0 10px rgb(255, 241, 119),
+    0 0 21px rgb(255, 241, 119),
+    
+    0 0 42px rgb(255, 241, 119),
+    0 0 92px rgb(255, 241, 119);
+}
+
+.storefront {
+    width: 45%;
 }
 
 /* my projects on homepage */
