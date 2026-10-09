@@ -13,6 +13,7 @@ EMAIL: emilyy12@uci.edu
   <link rel="icon" type="image/png" href="/assets/favicon.png">
    <!-- you would link to an external stylesheet here! -->
   <link rel="stylesheet" href="../style.css">
+  <link rel="stylesheet" href="../styles/about.css">
    <!-- you would also link to Bootstrap here! -->
   <title>About | Emily Yang</title>
 </head>
@@ -33,29 +34,43 @@ EMAIL: emilyy12@uci.edu
       <li><a href="./contact.html">contact</a></li>
     </ul>
   </nav>
-  <h1>about me</h1>
-  <!-- image of myself -->
-  <img alt="headshot of Emily Yang" src=""/>
   
-  <!-- description of career goals -->
-  <div>
-    Hi everyone! I'm Emily, a 3rd-year computer science student at UC Irvine. 
-    I'm focused primarily on frontend development, where I currently use React and HTML/CSS, 
-    but I'm also interested in pursuing full-stack development using my knowledge of Python, 
-    C/C++, and Java. Something I'm currently working on is the WICS @ UCI website with a team 
-    of developers and designers to improve its accessibility for everyone and provide a more 
-    enjoyable experience to use. 
-    <br>
-    I love making technology that feels good for everyone to use, even if that's just through a clean 
-    UI or code that's easy for another developer to understand. I plan to carry these motivations into 
-    my next goal: interning at a company that shares these values. If that sounds like your team or 
-    if this resonates with you, message me on LinkedIn! Even if you just want to chat, I'm open to 
-    discussing anything.
-  </div>
+  <div class="aboutcontainer">
+    <!-- want to style it as a receipt -->
+    <div id="receipt">
+      <h1>about me</h1>
+      <p>
+        Hi everyone! I'm Emily Yang, a third year computer science major
+        at UC Irvine. 
+        <br/>
+        <br/>
+        I'm focused primarily on frontend development, where I currently 
+        use React and HTML/CSS, but I'm also interested in pursuing full-stack 
+        development using my knowledge of Python, C/C++, and Java. Something 
+        I'm currently working on is the WICS @ UCI website with a team of 
+        developers and designers to improve its accessibility for everyone and 
+        provide a more enjoyable experience to use. 
+        <br/>
+        <br/>
+        I love making technology that feels good for everyone to use, even if 
+        that's just through a clean UI or code that's easy for another developer 
+        to understand. I plan to carry these motivations into my next goal: 
+        interning at a company that shares these values. If that sounds like your 
+        team or if this resonates with you, message me on LinkedIn! Even if you 
+        just want to chat, I'm open to discussing anything.
+      </p>
+    </div>
 
-  <!-- contact me / socials -->
-  <div>
-    <div>linkedin</div>
+    <!-- want to style it as a membership card or id card -->
+    <div id="card">
+      <div class="">
+        <h2>Emily Yang</h2>
+        <p>school: UC Irvine</p>
+        <p>year: 3</p>
+        <p>expected: 06/2028</p>
+      </div>
+      <img src="../assets/ruari.jpeg" alt="headshot"/>
+    </div>
   </div>
 
   <footer>
