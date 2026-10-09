@@ -1,3 +1,13 @@
+body {
+    padding-top: 100px;
+    background-color: rgb(166, 212, 174);
+    display: flex;
+    flex-direction: column;
+    gap: 100px;
+    margin: 0;
+}
+
+
 /* navbar */
 nav {
     position: fixed;
@@ -5,6 +15,7 @@ nav {
     left: 0%;
     width: 100vw;
     box-sizing: border-box;
+    z-index: 100;
 
     display: flex;
     /* align-items: center; */
@@ -31,4 +42,204 @@ nav a {
 
 nav a:visited {
     color: black;
+}
+
+/* hero on homepage */
+.hero {
+    display: flex;
+    justify-content: center;
+}
+
+.hero h1 {
+    position: absolute;
+    top: 28%;
+    font-size: 80px;
+    color: rgb(14, 23, 93);
+
+    text-shadow: 
+    0 0 7px #fff,
+    
+    0 0 10px rgb(255, 241, 119),
+    0 0 21px rgb(255, 241, 119),
+    
+    0 0 42px rgb(255, 241, 119),
+    0 0 92px rgb(255, 241, 119);
+}
+
+.storefront {
+    width: 45%;
+}
+
+/* my projects on homepage */
+.projectsection {
+    display: flex;
+    align-items: flex-end;
+}
+
+.chalkboardcontainer {
+    position: relative;
+    width: 35%;
+    /* background-color: red; */
+}
+
+.chalkboardcontainer h2 {
+    position: absolute;
+    top: 30%;
+    left: 15%;
+    right: 0;
+    margin: 0;
+    text-align: center;
+    color: white;  
+    font-size: 45px;
+    width: 40%;
+    display: flex;
+    justify-content: center;
+}
+
+.chalkboard {
+    display: block;
+    width: 75%;
+    z-index: 1;
+}
+
+.shelfcontainer {
+    /* background-color: red; */
+    position: relative;
+    width: 65%;
+    display: flex;
+    justify-content: center;
+}
+
+.catshelf {
+    display: block;
+    width: 75%;
+    z-index: 1;
+}
+
+.projects {
+    position: absolute;
+    inset: 0;
+}
+
+.project {
+    position: absolute;
+    width: 15%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    /* background-color: black; */
+    align-items: center;
+    text-align: center;
+    z-index: 2;
+}
+
+.project p {
+    background-color: white;
+    padding: 10px;
+    border-radius: 10px;
+    font-size: 18px;
+    /* width: 80%; */
+}
+
+.homeproject {
+    position: static;
+    display: block;
+}
+
+img.homeproject {
+    width: 100%;
+}
+
+#wics, #catropolis, #captybara {
+    bottom: 41%;
+}
+
+#rooted, #searchengine, #hiddenfigirlines {
+    bottom: 9%;
+}
+
+#wics, #rooted { left: 25%; }
+
+#catropolis, #searchengine { left: 42%; }
+
+#captybara, #hiddenfigirlines { left: 59%; }
+
+
+/* languages and frameworks on homepage */
+.beltsection {
+    position: relative;
+}
+
+.conveyerbelt {
+    display: block;
+    width: 100%;
+    z-index: 1;
+}
+
+.belttext {
+    position: absolute;
+    top: 5%;
+    left: 10%;
+    width: 40%;
+    /* text-align: center; */
+    color: black;
+    margin: 0;
+    z-index: 2;
+}
+
+.belttext p {
+    width: 70%;
+}
+
+.belttext h2 {
+    font-size: 45px;
+    width: 40%;
+}
+
+.jarcontainer {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 10%;
+    overflow: hidden;
+    z-index: 2;
+}
+
+.jartrack {
+    display: flex;
+    align-items: flex-end;
+    width: max-content;
+    animation: scroll 35s linear infinite;
+}
+
+.jar {
+    flex-shrink: 0;
+    width: 14vw;
+    margin-right: 3vw;
+    text-align: center;
+}
+
+.jar img {
+    width: 100%;
+    display: block;
+}
+
+.jar p {
+    text-shadow: 
+    0 0 7px #fff,
+    
+    0 0 10px rgb(255, 241, 119),
+    0 0 21px rgb(255, 241, 119),
+    
+    0 0 42px rgb(255, 241, 119),
+    0 0 92px rgb(255, 241, 119);
+}
+
+@keyframes scroll {
+    from { transform: translateX(0); }
+    to   { transform: translateX(-50%); }
+}
+
+.jartrack:hover {
+    animation-play-state: paused;
 }
