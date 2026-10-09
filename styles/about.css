@@ -1,0 +1,21 @@
+.aboutcontainer {
+    display: flex;
+}
+
+#receipt {
+}
+
+#card {
+    width: 60%;
+    height: 30vh;
+    background-color: white;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    padding: 10px 20px;
+}
+
+#card img {
+    width: auto;
+    height: 100%;
+}
