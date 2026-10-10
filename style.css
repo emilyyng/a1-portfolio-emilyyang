@@ -1,5 +1,6 @@
 body {
     margin: 50px 150px;
+    font-family: 'Inter', sans-serif;
     background-color: var(--color-background);
     display: flex;
     flex-direction: column;
@@ -86,6 +87,20 @@ nav a {
 
 nav a:visited {
     color: black;
+}
+
+.current-page a {
+    background-color: var(--color-navbar-highlight);
+    padding: 10px 10px;
+    border-radius: var(--border-radius);
+}
+
+.current-page li {
+    background-image: url('./assets/catpoint.png');
+    background-repeat: no-repeat; 
+    background-position: 0px 5px; 
+    background-size: 16px 16px; 
+    padding-left: 25px;
 }
 
 /* footer */
@@ -523,7 +538,7 @@ img.homeproject {
     --color-background: white;
     --color-navbar: #b8d4b8;
     --color-navbar-text: #532f1b;
-    --color-navbar-highlight: #ffdabc;
+    --color-navbar-highlight: #d5e9d5;
     --color-footer: #FFF5ED;
     --color-text: black;
     --color-btn: rgb(110, 54, 30);
