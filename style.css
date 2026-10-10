@@ -1,5 +1,5 @@
 body {
-    margin: 15px 150px;
+    margin: 15px 150px 50px;
     font-family: 'Inter', sans-serif;
     background-color: var(--color-background);
     display: flex;
@@ -104,6 +104,19 @@ nav a:visited {
 }
 
 /* footer */
+footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: var(--color-footer);
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow);
+    padding: 40px;
+    /* gap: 50px; */
+    margin-top: 100px;
+    z-index: 8;
+}
+
 footer h3 {
     margin: 0;
 }
@@ -131,28 +144,15 @@ footer img {
 }
 
 footer hr {
-    margin-left: 0; 
+    /* margin-left: 0;  */
     width: 90%; 
     border: 0.5px solid black;
 }
 
-footer form {
+#footer-title {
     display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-}
-
-footer form input {
-    width: 70%;
-    height: 2rem;
-    margin-bottom: 15px;
-    border-radius: 10px;
-    border: 1px solid rgb(152, 152, 152);
-    padding-left: 10px;
-}
-
-footer form button {
-    font-size: 15px;
+    align-items: center;
+    gap: 10px;
 }
 
 /* hero on homepage */
@@ -539,7 +539,7 @@ img.homeproject {
     --color-navbar: #b8d4b8;
     --color-navbar-text: #532f1b;
     --color-navbar-highlight: #d5e9d5;
-    --color-footer: #FFF5ED;
+    --color-footer: #b8d4b8;
     --color-text: black;
     --color-btn: rgb(110, 54, 30);
     --color-btn-text: white;
