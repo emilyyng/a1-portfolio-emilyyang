@@ -13,6 +13,7 @@ EMAIL: emilyy12@uci.edu
   <link rel="icon" type="image/png" href="/assets/favicon.png">
    <!-- you would link to an external stylesheet here! -->
   <link rel="stylesheet" href="../style.css">
+  <link rel="stylesheet" href="../styles/projects.css">
    <!-- you would also link to Bootstrap here! -->
   <title>Projects | Emily Yang</title>
 </head>
@@ -33,48 +34,39 @@ EMAIL: emilyy12@uci.edu
       <li><a href="./contact.html">contact</a></li>
     </ul>
   </nav>
-  <div>
+
+  <div id="hero">
+    <!-- <img class="cat-art" id="fatty-art" onClick="playMeow()" src="./images/art/fatty.png" alt="fat cat art"/> -->
     <h1>my projects</h1>
     <p>these are projects i've worked on, past and present!</p>
+    <a href="https://github.com/emilyyng" target="_blank"><button>my github!</button></a>
+    <!-- <img class="cat-art" id="pihckle-art" onClick="playMeow()" src="./images/art/pihckle.png" alt="cat with three pickles art"/> -->
   </div>
-  <!-- project gallery, should include details about what they are (screenshots, description) -->
-  <div>
-    <div>
-      wics website
-      <!-- image here -->
-      <div>description</div>
-      <a href="">link to github/devpost/website</a>
+
+  <!-- project gallery, populated using javascript -->
+  <div id="projects"></div>
+
+  <!-- dims screen when project card pops up -->
+  <div id="overlay"></div>
+
+  <!-- project card popup that shows project description -->
+  <div id="project-card">
+      <div id="bar">
+          <button id="close-card">x</button>
+      </div>
+      <div id="card-content">
+          <div>
+              <img src="" alt=""/>
+          </div>
+          <div>
+              <h2>project</h2>
+              <p>description</p>
+          </div>
+      </div>
+      <div id="card-btns">
+          <a href="#" target="_blank" rel="noopener noreferrer"><button>view project &#8599;</button></a>
+      </div>
     </div>
-    <div>
-      catropolis
-      <!-- image here -->
-      <div>description</div>
-      <a href="">link to github/devpost/website</a>
-    </div>
-    <div>
-      captybara
-      <!-- image here -->
-      <div>description</div>
-      <a href="">link to github/devpost/website</a>
-    </div>
-    <div>
-      rooted
-      <!-- image here -->
-      <div>description</div>
-      <a href="">link to github/devpost/website</a>
-    </div>
-    <div>
-      search engine
-      <!-- image here -->
-      <div>description</div>
-      <a href="">link to github/devpost/website</a>
-    </div>
-    <div>
-      hidden figirlines
-      <!-- image here -->
-      <div>description</div>
-      <a href="">link to github/devpost/website</a>
-    </div>
-  </div>
+  <script src="../script.js"></script>
 </body>
 </html>
