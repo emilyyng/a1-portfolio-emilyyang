@@ -1,0 +1,38 @@
+[
+    {
+        "image": "/assets/projects/wicsanteater.png",
+        "name": "wics website",
+        "description": "the WICS @ UCI Website is a place for users to discover more about what WICS does and how to become involved with the club.",
+        "link": "https://wics.ics.uci.edu/"
+    },
+    {
+        "image": "/assets/projects/catropolisfish.png",
+        "name": "catropolis",
+        "description": "catropolis is a mock cat adoption website that lets users view and apply to adopt for cats",
+        "link": "https://emilyyng.github.io/catropolis/"
+    },
+    {
+        "image": "/assets/projects/captybara.png",
+        "name": "captybara",
+        "description": "captybara is a chrome extension that allows users to view captions on YouTube in two languages at once",
+        "link": "https://devpost.com/software/capty-bara"
+    },
+    {
+        "image": "/assets/projects/rootedplant.png",
+        "name": "rooted",
+        "description": "rooted is a smart plant-care system that combines an outdoor sensor with a companion web app that provides users actionable items to help care for their plant",
+        "link": "https://devpost.com/software/welcome-back-shart"
+    },
+    {
+        "image": "/assets/projects/searchengineics.png",
+        "name": "search engine",
+        "description": "this search engine helps users find information across the ics.uci.edu domain",
+        "link": "https://github.com/jmrzn/search-engine"
+    },
+    {
+        "image": "/assets/projects/hiddenfigirlinesbox.png",
+        "name": "hidden figirlines",
+        "description": "hidden figirlines is a fun and educational website that helps users learn about important historical female figures through a game and a blind box reward system",
+        "link": "https://devpost.com/software/hidden-figirlines"
+    }
+]
