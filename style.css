@@ -8,7 +8,7 @@ body {
     overflow-x: hidden;
 }
 
-button {
+button, .button {
     background-color: var(--color-btn);
     color: var(--color-btn-text);
     border-radius: 30px;
@@ -21,13 +21,13 @@ button {
     cursor: pointer;
 }
 
-/* button:hover {
+/* button:hover, .button:hover {
     background-color: var(--color-btn-hover);
     border: 2px solid var(--color-btn-hover);
     color: black;
 } */
 
-button:active {
+button:active, .button:active {
     box-shadow: var(--button-shadow) inset;
 }
 
@@ -105,7 +105,7 @@ nav a:visited {
     border-radius: var(--border-radius);
 }
 
-.current-page li {
+ li .current-page {
     background-image: url('./assets/catpoint.png');
     background-repeat: no-repeat; 
     background-position: 0px 5px; 

@@ -47,7 +47,7 @@ body {
     text-align: center;
 }
 
-#hero button {
+#hero .button, #hero button  {
     position: relative;
     z-index: 5;
 }
@@ -205,7 +205,7 @@ body {
     gap: 50px;
 }
 
-#proj-carousel button {
+#proj-carousel button, #proj-carousel .button {
     padding: 10px 20px;
 
 }
