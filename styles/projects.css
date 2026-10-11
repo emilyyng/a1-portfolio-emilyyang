@@ -12,7 +12,6 @@
 
 #hero p {
     margin: 30px 0px;
-    font-weight: bold;
 }
 
 #projects {
@@ -100,7 +99,6 @@
 }
 
 #card-content h2 {
-    font-size: 70px;
     margin: 0;
 }
 
