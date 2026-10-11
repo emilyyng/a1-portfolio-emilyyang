@@ -222,7 +222,6 @@ body {
     gap: 10px;
     width: 20vw;
     justify-content: center;
-    align-items: space-between;
 }
 
 .carousel-card img {
@@ -270,15 +269,6 @@ body {
         transparent 100%
     );
 
-    -webkit-mask-image: linear-gradient(
-        to right, 
-        transparent 0%, 
-        black 10%, 
-        black 90%, 
-        transparent 100%
-    );
-
-    
     &:hover .jartrack {
       animation-play-state: paused;
     }
