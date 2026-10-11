@@ -99,7 +99,7 @@ document.addEventListener("DOMContentLoaded", function () {
             <img src="${proj.image}" alt="${proj.name}" />
             <h3>${proj.name}</h3>
           </div>
-          <a href="${proj.link}" target="_blank"><button>view project &#8599;</button></a>
+          <a href="${proj.link}" target="_blank" class="button>view project &#8599;</a>
         `;
 
         card.addEventListener("click", (e) => {

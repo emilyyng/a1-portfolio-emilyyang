@@ -159,7 +159,7 @@
     align-items: center;
 }
 
-.card button {
+.card .button, .card button {
     align-self: center;
     margin-top: 10px;
 }
