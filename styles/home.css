@@ -5,6 +5,19 @@ body {
     gap: 50px;
 }
 
+.revealable {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+  will-change: opacity, transform;
+  margin: 0; 
+}
+
+.active-scroll {
+  opacity: 1;
+  transform: translateY(0);
+}
+
 /* hero section */
 #hero {
     display: flex;
@@ -90,7 +103,12 @@ body {
     flex-direction: column;
     gap: 10px;
     width: 20vw;
+    /* transition: transform 0.3s ease; */
 }
+
+/* .carousel-card:hover {
+    transform: translateY(-10px);
+} */
 
 .carousel-card img {
     width: 100%;
@@ -187,8 +205,4 @@ body {
 @keyframes scroll {
     from { transform: translateX(0); }
     to   { transform: translateX(-50%); }
-}
-
-.jartrack:hover {
-    animation-play-state: paused;
 }
