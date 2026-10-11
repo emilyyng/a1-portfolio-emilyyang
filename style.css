@@ -22,11 +22,11 @@ button {
 }
 
 button:active {
-    box-shadow: var(--shadow) inset;
+    box-shadow: var(--button-shadow) inset;
 }
 
 h1 {
-    font-size: 96px;
+    font-size: 70px;
 }
 
 h2 {
@@ -181,4 +181,5 @@ footer hr {
     /* layout + effects */
     --border-radius: 20px;
     --shadow: 1px 2px 5px 0px #627e57; /* offset-x offset-y blur-radius spread-radius color inset; */
+    --button-shadow: 1px 2px 5px 0px rgb(39, 15, 4);
 }
