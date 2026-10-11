@@ -1,62 +1,85 @@
-// document.addEventListener('DOMContentLoaded', () => {
-//     const carouselContainer = document.querySelector(".carousel-card");
-//     if (!carouselContainer) return; // Guard clause if carousel isn't on this page
+// SCROLLING ANIMATION ON HOME PAGE
+document.addEventListener("DOMContentLoaded", () => {
+    const revealObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                // Add class when element enters viewport
+                entry.target.classList.add('active-scroll');
+            } else {
+                // Remove class when element leaves viewport
+                entry.target.classList.remove('active-scroll');
+            }
+        });
+    }, {
+        rootMargin: '0px 0px -50px 0px',
+        threshold: 0.1
+    });
 
-//     let projects = [];
-//     let currentIndex = 0;
+    document.querySelectorAll('.revealable').forEach(el => {
+        revealObserver.observe(el);
+    });
+});
 
-//     fetch('/data/projects.json')
-//         .then(response => response.json())
-//         .then(data => {
-//             projects = data;
-//             updateCarousel();
-//         })
-//         .catch(error => console.error('Error loading project data:', error));
 
-//     function updateCarousel() {
-//         if (!projects.length) return;
+// PROJECTS CAROUSEL ON HOME PAGE
+document.addEventListener('DOMContentLoaded', () => {
+    const carouselContainer = document.querySelector(".carousel-card");
+    if (!carouselContainer) return;
 
-//         const cards = document.querySelectorAll(".carousel-card");
+    let projects = [];
+    let currentIndex = 0;
 
-//         cards.forEach((card, i) => {
-//             const targetIndex = (currentIndex + i) % projects.length;
-//             const proj = projects[targetIndex];
+    fetch('/data/projects.json')
+        .then(response => response.json())
+        .then(data => {
+            projects = data;
+            updateCarousel();
+        })
+        .catch(error => console.error('Error loading project data:', error));
 
-//             card.id = `${proj}`;
-//             card.style.cursor = "pointer";
+    function updateCarousel() {
+        if (!projects.length) return;
 
-//             card.querySelector("img").src = proj.image;
-//             card.querySelector("img").alt = proj.name;
-//             card.querySelector("h3").textContent = proj.name;
-//             card.querySelector(".desc").textContent = `${proj.description}`;
-//             card.querySelector(".link").innerHTML = `${proj.link}`;
+        const cards = document.querySelectorAll(".carousel-card");
 
-//             // Rebind card node to clear old click handlers
-//             const newCard = card.cloneNode(true);
-//             card.parentNode.replaceChild(newCard, card);
+        cards.forEach((card, i) => {
+            const targetIndex = (currentIndex + i) % projects.length;
+            const proj = projects[targetIndex];
 
-//             newCard.addEventListener("click", (e) => {
-//               if (e.target.classList.contains("fav-btn")) return;
-//               openProfile(proj);
-//             });
-//         });
-//     }
+            card.id = `${proj}`;
+            card.style.cursor = "pointer";
 
-//     const nextBtn = document.getElementById('next-btn');
-//     const prevBtn = document.getElementById('prev-btn');
+            card.querySelector("img").src = proj.image;
+            card.querySelector("img").alt = proj.name;
+            card.querySelector("h3").textContent = proj.name;
+            // card.querySelector(".desc").textContent = `${proj.description}`;
+            // card.querySelector(".link").innerHTML = `${proj.link}`;
 
-//     if (nextBtn && prevBtn) {
-//       nextBtn.addEventListener('click', () => {
-//           currentIndex = (currentIndex + 1) % projects.length;
-//           updateCarousel();
-//       });
+            // const newCard = card.cloneNode(true);
+            // card.parentNode.replaceChild(newCard, card);
 
-//       prevBtn.addEventListener('click', () => {
-//           currentIndex = (currentIndex - 1 + projects.length) % projects.length;
-//           updateCarousel();
-//       });
-//     }
-// });
+            // newCard.addEventListener("click", (e) => {
+            //   if (e.target.classList.contains("fav-btn")) return;
+            //   openProfile(proj);
+            // });
+        });
+    }
+
+    const nextBtn = document.getElementById('next-btn');
+    const prevBtn = document.getElementById('prev-btn');
+
+    if (nextBtn && prevBtn) {
+      nextBtn.addEventListener('click', () => {
+          currentIndex = (currentIndex + 1) % projects.length;
+          updateCarousel();
+      });
+
+      prevBtn.addEventListener('click', () => {
+          currentIndex = (currentIndex - 1 + projects.length) % projects.length;
+          updateCarousel();
+      });
+    }
+});
 
 
 
