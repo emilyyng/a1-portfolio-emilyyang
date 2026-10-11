@@ -177,14 +177,13 @@ body {
 }
 
 /* projects carousel */
-#projects {
+#my-projects {
     display: flex;
     flex-direction: column;
-    gap: 10px;
+    gap: 20px;
 }
-#projects h2{
-    margin-bottom: 0px;
-    text-align: center;
+#my-projects h2, p{
+    margin: 0px;
 }
 
 #my-projects a{
@@ -213,7 +212,7 @@ body {
 
 #carousel {
     display: flex;
-    align-items: center;
+    align-items: stretch;
     gap: 50px;
 }
 
@@ -222,18 +221,22 @@ body {
     flex-direction: column;
     gap: 10px;
     width: 20vw;
+    justify-content: center;
+    align-items: space-between;
     /* transition: transform 0.3s ease; */
 }
 
 .carousel-card img {
+    aspect-ratio: 16 / 10;
+    object-fit: contain;
     width: 100%;
     height: auto;
     margin-bottom: 10px;
 }
 
-.carousel-card h3 {
+.carousel-card p {
     margin: 0;
-    font-size: 23px;
+    font-weight: bold;
     text-align: center;
 }
 
@@ -241,9 +244,15 @@ body {
 /* languages and frameworks on homepage */
 .beltsection {
     position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
 }
 
 .belttext {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
     text-align: right;
     color: black;
     margin: 0;
@@ -309,4 +318,9 @@ body {
 @keyframes scroll {
     from { transform: translateX(0); }
     to   { transform: translateX(-50%); }
+}
+
+
+footer {
+    margin-top: 0;
 }

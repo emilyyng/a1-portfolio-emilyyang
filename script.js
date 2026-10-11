@@ -49,7 +49,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
             card.querySelector("img").src = proj.image;
             card.querySelector("img").alt = proj.name;
-            card.querySelector("h3").textContent = proj.name;
+            card.querySelector("p").textContent = proj.name;
             // card.querySelector(".desc").textContent = `${proj.description}`;
             // card.querySelector(".link").innerHTML = `${proj.link}`;
 
