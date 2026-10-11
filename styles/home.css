@@ -1,0 +1,326 @@
+body {
+    overflow-x: hidden;
+    position: relative;
+    display: flex;
+    gap: 150px;
+}
+
+.revealable {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+  will-change: opacity, transform;
+  margin: 0; 
+}
+
+.active-scroll {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* hero section */
+#hero {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 180px 0px;
+    margin-bottom: 50px;
+    gap: 20px;
+}
+
+#hero h1 {
+    position: relative;
+    z-index: 5;
+    margin-bottom: 0;
+    text-align: center;
+}
+
+#hero em {
+    color: rgb(21, 126, 21);
+}
+
+#hero p {
+    position: relative;
+    z-index: 5;
+    margin: 0px;
+    text-align: center;
+}
+
+#hero button {
+    position: relative;
+    z-index: 5;
+}
+
+.socials {
+    display: flex;
+    gap: 1vw;
+}
+
+.social {
+    width: 40px;
+}
+
+
+/* cat animations in hero */
+#snoozing-cat,
+#fishing-cat,
+#snoozing-cat img,
+#fishing-cat img {
+    pointer-events: none;
+}
+
+#snoozing-cat {
+    display: flex;
+    justify-content: center;
+}
+
+#ft-cat {
+    position: relative;
+    width: 40%;
+    height: auto;
+    z-index: 7;
+    top: 20px;
+    left: 40%;
+}
+
+.footzies {
+    position: relative;
+    z-index: 8;
+    animation: smooth-bounce 2s ease-in-out infinite;
+    will-change: transform;
+}
+
+#ft-z1 {
+    height: 25px;
+    top: 35px;
+    left: 25%;
+    animation-delay: 0s;
+}
+
+#ft-z2 {
+    height: 30px;
+    top: 0px;
+    left: 26%;
+    animation-delay: 0.3s
+}
+
+#ft-z3 {
+    height: 35px;
+    top: -35px;
+    left: 22%;
+    animation-delay: 0.6s;
+}
+
+@keyframes smooth-bounce {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-5px); /* Moves up 12px */
+    }
+}
+
+#fishing-cat {
+    position: absolute;
+    z-index: 7;
+}
+
+#catfish {
+    position: relative;
+    width: 26%;
+    height: auto;
+    top: 110px;
+    left: -5%;
+}
+
+.fihsh {
+    position: relative;
+    z-index: 8;
+    animation: flipping 1.8s ease-in-out infinite;
+    will-change: transform;
+}
+
+#fishy1 {
+    width: 3%;
+    height: auto;
+    top: -55px;
+    left: -27%;
+    animation-delay: 0.3s
+}
+
+#fishy2 {
+    width: 3%;
+    height: auto;
+    top: 30px;
+    left: -28%;
+    animation-delay: 0s;
+}
+
+
+@keyframes flipping {
+    0%, 100% {
+        transform: rotate(0deg);
+    }
+    50% {
+        transform: rotate(-15deg);
+    }
+}
+
+@keyframes fade-out {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+/* projects carousel */
+#my-projects {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+#my-projects h2, p{
+    margin: 0px;
+}
+
+#my-projects a{
+    margin-bottom: 20px;
+    align-self: start;
+    font-weight: bold;
+    text-decoration: underline;
+    text-decoration-thickness: 2px; 
+    text-underline-offset: 4px;
+}
+
+#my-projects a:visited{
+    color: var(--color-link)
+}
+
+#proj-carousel {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+}
+
+#proj-carousel button {
+    padding: 10px 20px;
+
+}
+
+#carousel {
+    display: flex;
+    align-items: stretch;
+    gap: 50px;
+}
+
+.carousel-card {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 20vw;
+    justify-content: center;
+    align-items: space-between;
+    /* transition: transform 0.3s ease; */
+}
+
+.carousel-card img {
+    aspect-ratio: 16 / 10;
+    object-fit: contain;
+    width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+.carousel-card p {
+    margin: 0;
+    font-weight: bold;
+    text-align: center;
+}
+
+
+/* languages and frameworks on homepage */
+.beltsection {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.belttext {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    text-align: right;
+    color: black;
+    margin: 0;
+    z-index: 2;
+}
+
+.jarcontainer {
+    overflow: hidden;
+    z-index: 2;
+
+    mask-image: linear-gradient(
+        to right, 
+        transparent 0%, 
+        black 10%, 
+        black 90%, 
+        transparent 100%
+    );
+
+    -webkit-mask-image: linear-gradient(
+        to right, 
+        transparent 0%, 
+        black 10%, 
+        black 90%, 
+        transparent 100%
+    );
+
+    
+    &:hover .jartrack {
+      animation-play-state: paused;
+    }
+}
+
+.jartrack {
+    display: flex;
+    align-items: flex-end;
+    width: max-content;
+    animation: scroll 35s linear infinite;
+    gap: 2vw;
+}
+
+.jar {
+    width: 14vw;
+    flex-shrink: 0;
+    color: white;
+    font-size: xx-large;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 50px;
+    text-align: center;
+}
+
+.jar img {
+    width: auto;
+    height: 8vw;
+    max-width: 100%;
+    object-fit: contain;
+    display: block;
+}
+
+@keyframes scroll {
+    from { transform: translateX(0); }
+    to   { transform: translateX(-50%); }
+}
+
+
+footer {
+    margin-top: 0;
+}
