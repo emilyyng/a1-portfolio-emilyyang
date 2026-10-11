@@ -21,6 +21,12 @@ button {
     cursor: pointer;
 }
 
+/* button:hover {
+    background-color: var(--color-btn-hover);
+    border: 2px solid var(--color-btn-hover);
+    color: black;
+} */
+
 button:active {
     box-shadow: var(--button-shadow) inset;
 }
@@ -63,7 +69,7 @@ nav {
     background-color: var(--color-navbar);
     width: 75%;
     border-radius: 20px;
-    z-index: 100;
+    z-index: 10;
 }
 
 nav ul{
@@ -175,6 +181,7 @@ footer hr {
     --color-footer: #b8d4b8;
     --color-text: black;
     --color-btn: rgb(110, 54, 30);
+    --color-btn-hover: rgb(237, 187, 187);
     --color-btn-text: white;
     --color-border: #277731;
     --color-card: #d8e9da;
