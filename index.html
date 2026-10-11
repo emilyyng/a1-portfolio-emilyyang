@@ -13,6 +13,7 @@ EMAIL: emilyy12@uci.edu
   <link rel="icon" type="image/png" href="/assets/favicon.png">
    <!-- you would link to an external stylesheet here! -->
   <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="./styles/home.css">
    <!-- you would also link to Bootstrap here! -->
   <title>Emily Yang's Portfolio</title>
 </head>
@@ -41,78 +42,33 @@ EMAIL: emilyy12@uci.edu
   </div>
 
   <!-- project preview -->
-  <!-- <div class="projectsection">
-    <div class="shelfcontainer">
-      <img class="catshelf" src="/assets/drawings/catshelf.png" alt="brown shelf shaped like a cat"/>
-      <div class="projects">
-        <div class="project" id="wics">
-          <img class="homeproject" src="/assets/projects/wicsanteater.png" alt="wics logo with anteater on computer"/>
-          <p>wics website</p>
+  <div id="my-projects" class="revealable">
+    <h2>my projects</h2>
+    <p>
+        the projects i've worked on
+    </p>
+    <a href="./pages/projects.html">click here to learn more about my projects &#8594;</a>
+    <div id="proj-carousel">
+        <button id="prev-btn">&#8249;</button>
+        <div id="carousel">
+            <div class="carousel-card">
+                <img class="homeproject"/>
+                <h3></h3>
+                <!-- <button>view project</button> -->
+            </div>
+            <div class="carousel-card">
+                <img class="homeproject"/>
+                <h3></h3>
+                <!-- <button>view project</button> -->
+            </div>
+            <div class="carousel-card">
+                <img class="homeproject"/>
+                <h3></h3>
+                <!-- <button>view project</button> -->
+            </div>
         </div>
-
-        <div class="project" id="catropolis">
-          <img class="homeproject" src="/assets/projects/catropolisfish.png" alt="white cat holding a fish"/>
-          <p>catropolis</p>
-        </div>
-
-        <div class="project" id="captybara">
-          <img class="homeproject" src="/assets/projects/captybara.png" alt="captybara logo"/>
-          <p>captybara</p>
-        </div>
-
-        <div class="project" id="rooted">
-          <img class="homeproject" src="/assets/projects/rootedplant.png" alt="rooted plant logo"/>
-          <p>rooted</p>
-        </div>
-
-        <div class="project" id="searchengine">
-          <img class="homeproject" src="/assets/projects/searchengineics.png" alt="search engine logo"/>
-          <p>search engine</p>
-        </div>
-
-        <div class="project" id="hiddenfigirlines">
-          <img class="homeproject" src="/assets/projects/hiddenfigirlinesbox.png" alt="hidden figirlines blind box featuring Rosalind Franklin"/>
-          <p>hidden figirlines</p>
-        </div>
-      </div>
-    </div> 
-
-
-    <div class="chalkboardcontainer">
-      <h2>my projects</h2>
-      <img class="chalkboard" src="assets/drawings/chalkboard.png" alt="chalkboard drawing">
+        <button id="next-btn">&#8250;</button>
     </div>
-  </div>
-    
-    -->
-
-    <div id="my-projects" class="revealable">
-      <h2>my projects</h2>
-      <p>
-          the projects i've worked on
-      </p>
-      <a href="./pages/projects.html">click here to learn more about my projects &#8594;</a>
-      <div id="proj-carousel">
-          <button id="prev-btn">&#8249;</button>
-          <div id="carousel">
-              <div class="carousel-card">
-                  <img/>
-                  <h3></h3>
-                  <!-- <button>view project</button> -->
-              </div>
-              <div class="carousel-card">
-                  <img/>
-                  <h3></h3>
-                  <!-- <button>view project</button> -->
-              </div>
-              <div class="carousel-card">
-                  <img/>
-                  <h3></h3>
-                  <!-- <button>view project</button> -->
-              </div>
-          </div>
-          <button id="next-btn">&#8250;</button>
-      </div>
   </div>
 
   <!-- languages + frameworks -->
@@ -181,5 +137,6 @@ EMAIL: emilyy12@uci.edu
     <hr>
     <p>&copy; 2026 emily yang. all rights reserved.</p>
   </footer>
+  <script src="../script.js"></script>
 </body>
 </html>

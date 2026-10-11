@@ -1,0 +1,194 @@
+body {
+    overflow-x: hidden;
+    position: relative;
+    display: flex;
+    gap: 50px;
+}
+
+/* hero section */
+#hero {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 210px 0px;
+    margin-bottom: 250px;
+}
+
+#hero h1 {
+    position: relative;
+    z-index: 5;
+    margin-bottom: 0;
+    text-align: center;
+}
+
+#hero p {
+    position: relative;
+    z-index: 5;
+    margin: 50px 0px;
+    text-align: center;
+    font-weight: bold;
+    font-size: 25px;
+}
+
+#hero button {
+    position: relative;
+    z-index: 5;
+}
+
+@keyframes fade-out {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+/* projects carousel */
+#projects {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+#projects h2{
+    margin-bottom: 0px;
+    text-align: center;
+}
+
+#my-projects a{
+    margin-bottom: 20px;
+    align-self: start;
+    font-weight: bold;
+    text-decoration: underline;
+    text-decoration-thickness: 2px; 
+    text-underline-offset: 4px;
+}
+
+#my-projects a:visited{
+    color: var(--color-link)
+}
+
+#proj-carousel {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+}
+
+#proj-carousel button {
+    padding: 10px 20px;
+
+}
+
+#carousel {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+}
+
+.carousel-card {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 20vw;
+}
+
+.carousel-card img {
+    width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+.carousel-card h3 {
+    margin: 0;
+    font-size: 23px;
+    text-align: center;
+}
+
+
+/* languages and frameworks on homepage */
+.beltsection {
+    position: relative;
+}
+
+.belttext {
+    /* text-align: center; */
+    color: black;
+    margin: 0;
+    z-index: 2;
+}
+
+.jarcontainer {
+    overflow: hidden;
+    z-index: 2;
+
+    mask-image: linear-gradient(
+        to right, 
+        transparent 0%, 
+        black 10%, 
+        black 90%, 
+        transparent 100%
+    );
+
+    -webkit-mask-image: linear-gradient(
+        to right, 
+        transparent 0%, 
+        black 10%, 
+        black 90%, 
+        transparent 100%
+    );
+
+    
+    &:hover .jartrack {
+      animation-play-state: paused;
+    }
+}
+
+.jartrack {
+    display: flex;
+    align-items: flex-end;
+    width: max-content;
+    animation: scroll 35s linear infinite;
+    gap: 2vw;
+}
+
+.jar {
+    width: 14vw;
+    flex-shrink: 0;
+    color: white;
+    font-size: xx-large;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 50px;
+    text-align: center;
+}
+
+.jar img {
+    width: auto;
+    height: 8vw;
+    max-width: 100%;
+    object-fit: contain;
+    display: block;
+}
+
+/* .jar p {
+    text-shadow: 
+    0 0 7px #fff,
+    
+    0 0 10px rgb(255, 241, 119),
+    0 0 21px rgb(255, 241, 119),
+    
+    0 0 42px rgb(255, 241, 119),
+    0 0 92px rgb(255, 241, 119);
+} */
+
+@keyframes scroll {
+    from { transform: translateX(0); }
+    to   { transform: translateX(-50%); }
+}
+
+.jartrack:hover {
+    animation-play-state: paused;
+}
