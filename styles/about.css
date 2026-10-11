@@ -2,7 +2,7 @@ body {
     overflow-x: hidden;
     position: relative;
     display: flex;
-    gap: 50px;
+    gap: clamp(30px, 5vw, 50px);
 }
 
 h1 {
@@ -44,7 +44,7 @@ ul {
 
 #about {
     display: flex;
-    gap: 3vw;
+    gap: clamp(20px, 3vw, 40px);
     align-items: center;
 }
 
@@ -65,12 +65,12 @@ a:active {
 }
 
 #about .social {
-    width: 3vw;
+    width: clamp(28px, 3vw, 40px);
 }
 
 .socials {
     display: flex;
-    gap: 2vw;
+    gap: clamp(14px, 2vw, 24px);
 }
 
 .about-text {
@@ -87,7 +87,7 @@ a:active {
 #interests {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    gap: 3vw;
+    gap: clamp(16px, 3vw, 40px);
 }
 
 .interest {
