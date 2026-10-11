@@ -124,36 +124,35 @@ body {
 #fishing-cat {
     position: absolute;
     z-index: 7;
-}
-
-#catfish {
-    position: relative;
-    width: 26%;
-    height: auto;
-    top: 110px;
+    width: clamp(120px, 22vw, 320px);
+    margin-top: 300px;
     left: -5%;
 }
 
+#catfish {
+    display: block;
+    width: 100%;     /* cat fills the box, so the box height = cat height */
+    height: auto;
+}
+
 .fihsh {
-    position: relative;
+    position: absolute;
+    width: 12%;
+    height: auto;
     z-index: 8;
     animation: flipping 1.8s ease-in-out infinite;
     will-change: transform;
 }
 
 #fishy1 {
-    width: 3%;
-    height: auto;
-    top: -55px;
-    left: -27%;
-    animation-delay: 0.3s
+    left: 15%;
+    top: 35%;
+    animation-delay: 0.3s;
 }
 
 #fishy2 {
-    width: 3%;
-    height: auto;
-    top: 30px;
-    left: -28%;
+    left: 27%;
+    top: 54%;
     animation-delay: 0s;
 }
 
@@ -202,18 +201,19 @@ body {
 #proj-carousel {
     display: flex;
     align-items: center;
-    gap: 50px;
+    justify-content: center;
+    /* gap: 2vw; */
 }
 
 #proj-carousel button, #proj-carousel .button {
-    padding: 10px 20px;
-
+    padding: 10px 18px;
+    border-radius: 50%;
 }
 
 #carousel {
     display: flex;
     align-items: stretch;
-    gap: 50px;
+    /* gap: 10vw; */
 }
 
 .carousel-card {
@@ -223,7 +223,6 @@ body {
     width: 20vw;
     justify-content: center;
     align-items: space-between;
-    /* transition: transform 0.3s ease; */
 }
 
 .carousel-card img {
@@ -323,4 +322,70 @@ body {
 
 footer {
     margin-top: 0;
+}
+
+
+
+
+
+
+
+
+/* responsiveness */
+body {
+    gap: clamp(60px, 10vw, 150px);
+}
+
+@media (max-width: 1100px) {
+    /* .carousel-card { width: 28vw; } */
+    /* .carousel-card:nth-child(4) { display: none; } */
+ 
+    /* #carousel,
+    #proj-carousel { gap: 24px; } */
+ 
+    .jar { width: 20vw; font-size: x-large; }
+    .jar img { height: 11vw; }
+}
+
+@media (max-width: 873px) {
+    #fishing-cat {
+        margin-top: 400px;
+        left: -15%;
+    }
+    
+    .carousel-card { width: 25vw; }
+    .carousel-card:nth-child(3) { display: none; }
+ 
+    #proj-carousel { gap: 0px; justify-content: center; }
+    #proj-carousel button { padding: 8px 16px; }
+}
+
+@media (max-width: 768px) {
+
+    #snoozing-cat {display: none; }
+    #fishing-cat { display: none; }
+ 
+    .socials { gap: 16px; }
+    .social { width: 30px; }
+ 
+    .belttext { text-align: left; }
+}
+
+@media (max-width: 550px) {
+    .carousel-card { width: 40vw; }
+    .carousel-card:nth-child(2) { display: none; }
+ 
+    #proj-carousel button { padding: 7px 14px; }
+}
+
+@media (max-width: 480px) {
+    #hero {
+        margin-top: 110px;
+        gap: 14px;
+    }
+ 
+    #hero h1,
+    #hero p { padding: 0 4px; }
+  
+    .social { width: 34px; }
 }
