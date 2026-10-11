@@ -2,7 +2,7 @@ body {
     overflow-x: hidden;
     position: relative;
     display: flex;
-    gap: 50px;
+    gap: 150px;
 }
 
 .revealable {
@@ -129,7 +129,7 @@ body {
 }
 
 .belttext {
-    /* text-align: center; */
+    text-align: right;
     color: black;
     margin: 0;
     z-index: 2;

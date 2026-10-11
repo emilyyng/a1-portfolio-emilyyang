@@ -3,10 +3,8 @@ document.addEventListener("DOMContentLoaded", () => {
     const revealObserver = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
-                // Add class when element enters viewport
                 entry.target.classList.add('active-scroll');
             } else {
-                // Remove class when element leaves viewport
                 entry.target.classList.remove('active-scroll');
             }
         });
