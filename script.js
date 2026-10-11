@@ -44,7 +44,6 @@ document.addEventListener('DOMContentLoaded', () => {
             const targetIndex = (currentIndex + i) % projects.length;
             const proj = projects[targetIndex];
 
-            card.id = `${proj}`;
             card.style.cursor = "pointer";
 
             card.querySelector("img").src = proj.image;
@@ -99,7 +98,7 @@ document.addEventListener("DOMContentLoaded", function () {
             <img src="${proj.image}" alt="${proj.name}" />
             <h3>${proj.name}</h3>
           </div>
-          <a href="${proj.link}" target="_blank" class="button>view project &#8599;</a>
+          <a href="${proj.link}" target="_blank" class="button">view project &#8599;</a>
         `;
 
         card.addEventListener("click", (e) => {
