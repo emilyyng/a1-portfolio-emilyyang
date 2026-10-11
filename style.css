@@ -55,29 +55,33 @@ a {
 nav {
     display: flex;
     align-content: center;
+    justify-content: space-between;
     position: fixed;
-    top: 0;
-    left: 0;
+    top: 3%;
+    left: 50%;
+    transform: translateX(-50%);
     background-color: var(--color-navbar);
-    width: 100%;
-    z-index: 10;
+    width: 75%;
+    border-radius: 20px;
+    z-index: 100;
 }
 
 nav ul{
     display: flex;
     align-items: center;
-    justify-content: space-evenly;
+    justify-content: space-between;
     list-style-type: none;
     gap: 30px;
-    padding: 10px 25px;
-    width: 70%;
-    margin: 0 auto;
+    padding: 10px 50px;
+    width: 50%;
+    margin: 0;
     font-size: 20px;
     font-weight: bold;
 }
 
 nav img {
-    padding: 10px;
+    padding: 10px 30px; 
+    width: 80px;
 }
 
 nav a {
