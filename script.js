@@ -1,6 +1,6 @@
-const PROJECTS_URL = new URL("data/projects.json", document.currentScript.src).href;
-const imgUrl = (path) => new URL(path, PROJECTS_URL).href;
-
+const SITE_ROOT = new URL("./", document.currentScript.src).href;
+const PROJECTS_URL = new URL("data/projects.json", SITE_ROOT).href;
+const imgUrl = (path) => new URL(path, SITE_ROOT).href;
 
 // SCROLLING ANIMATION ON HOME PAGE
 document.addEventListener("DOMContentLoaded", () => {
