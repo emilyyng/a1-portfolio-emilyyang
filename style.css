@@ -27,11 +27,11 @@ button, .button {
     text-decoration: none;
 }
 
-/* button:hover, .button:hover {
+button:hover, .button:hover {
     background-color: var(--color-btn-hover);
     border: 2px solid var(--color-btn-hover);
-    color: black;
-} */
+    color: rgb(68, 39, 12);
+}
 
 button:active, .button:active {
     box-shadow: var(--button-shadow) inset;
@@ -187,7 +187,7 @@ footer hr {
     --color-footer: #b8d4b8;
     --color-text: black;
     --color-btn: rgb(110, 54, 30);
-    --color-btn-hover: rgb(237, 187, 187);
+    --color-btn-hover: rgb(213, 171, 153);
     --color-btn-text: white;
     --color-border: #277731;
     --color-card: #d8e9da;
