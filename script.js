@@ -50,7 +50,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
             // card.style.cursor = "pointer";
 
-            card.querySelector("img").src = proj.image;
+            card.querySelector("img").src = imgUrl(proj.image);
             card.querySelector("img").alt = proj.name;
             card.querySelector("p").textContent = proj.name;
         });
