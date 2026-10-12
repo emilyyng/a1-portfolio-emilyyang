@@ -1,3 +1,7 @@
+const PROJECTS_URL = new URL("data/projects.json", document.currentScript.src).href;
+const imgUrl = (path) => new URL(path, PROJECTS_URL).href;
+
+
 // SCROLLING ANIMATION ON HOME PAGE
 document.addEventListener("DOMContentLoaded", () => {
     const revealObserver = new IntersectionObserver((entries) => {
@@ -27,7 +31,7 @@ document.addEventListener('DOMContentLoaded', () => {
     let projects = [];
     let currentIndex = 0;
 
-    fetch('/data/projects.json')
+    fetch(PROJECTS_URL)
         .then(response => response.json())
         .then(data => {
             projects = data;
@@ -76,7 +80,7 @@ document.addEventListener("DOMContentLoaded", function () {
   const container = document.getElementById("projects");
   if (!container) return;
 
-  fetch("/data/projects.json")
+  fetch(PROJECTS_URL)
     .then(response => response.json())
     .then(data => {
       data.forEach(proj => {
@@ -85,7 +89,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
         card.innerHTML = `
           <div class="card-cont">
-            <img src="${proj.image}" alt="${proj.name}" />
+            <img src="${imgUrl(proj.image)}" alt="${proj.name}" />
             <p><b>${proj.name}</b></p>
           </div>
           <a href="${proj.link}" target="_blank" class="button">view project &#8599;</a>
@@ -112,7 +116,7 @@ function openProfile(proj) {
 
   const cardImg = card.querySelector("#card-content img");
   if (cardImg) {
-    cardImg.src = proj.image;
+    cardImg.src = imgUrl(proj.image);
     cardImg.alt = proj.name;
   }
 
