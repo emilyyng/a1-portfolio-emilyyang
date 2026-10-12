@@ -25,6 +25,7 @@ ul {
     display: flex;
     justify-content: space-between;
     gap: 5vw;
+    max-width: 1100px;
 }
 
 #up-to li {
@@ -53,6 +54,7 @@ a:active {
 
 #about #headshot {
     width: 30%;
+    max-width: 300px;
     height: auto;
     border-radius: 20px;
     aspect-ratio: 3 / 4;
@@ -86,6 +88,7 @@ a:active {
 
 .interest img {
     width: 100%;
+    max-width: 450px;
     height: auto;
     aspect-ratio: 3 / 4;
     object-fit: cover;
