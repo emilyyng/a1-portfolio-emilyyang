@@ -2,7 +2,7 @@ body {
     overflow-x: hidden;
     position: relative;
     display: flex;
-    gap: 50px;
+    gap: clamp(30px, 5vw, 50px);
 }
 
 h1 {
@@ -10,26 +10,22 @@ h1 {
     margin-bottom: 0;
 }
 
-#subheading {
-    margin-top: 10px;
-    margin-bottom: 30px;
-    font-weight: bold;
-    font-size: 25px;
-}
-
 h2 {
     margin: 10px 0px;
     margin-top: 20px;
 }
 
-/* .aboutcontainer {
-    display: flex;
-} */
-
 ul {
   list-style-type: none; 
   padding: 0;
   margin: 0;
+}
+
+#up-to {
+    display: flex;
+    justify-content: space-between;
+    gap: 5vw;
+    max-width: 1100px;
 }
 
 #up-to li {
@@ -44,7 +40,7 @@ ul {
 
 #about {
     display: flex;
-    gap: 3vw;
+    gap: clamp(20px, 3vw, 40px);
     align-items: center;
 }
 
@@ -58,6 +54,7 @@ a:active {
 
 #about #headshot {
     width: 30%;
+    max-width: 300px;
     height: auto;
     border-radius: 20px;
     aspect-ratio: 3 / 4;
@@ -65,12 +62,12 @@ a:active {
 }
 
 #about .social {
-    width: 3vw;
+    width: clamp(28px, 3vw, 40px);
 }
 
 .socials {
     display: flex;
-    gap: 2vw;
+    gap: clamp(14px, 2vw, 24px);
 }
 
 .about-text {
@@ -79,15 +76,10 @@ a:active {
     align-items: center;
 }
 
-#up-to {
-    display: flex;
-    justify-content: space-between;
-}
-
 #interests {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    gap: 3vw;
+    gap: clamp(16px, 3vw, 40px);
 }
 
 .interest {
@@ -96,6 +88,7 @@ a:active {
 
 .interest img {
     width: 100%;
+    max-width: 450px;
     height: auto;
     aspect-ratio: 3 / 4;
     object-fit: cover;
@@ -105,4 +98,51 @@ a:active {
 footer{
     position: relative;
     z-index: 6;
+}
+
+
+
+
+
+@media (max-width: 873px) {
+    #about {
+        flex-direction: column;
+        align-items: center;
+    }
+ 
+    #about #headshot {
+        width: 60%;
+        max-width: 280px;
+        aspect-ratio: 1 / 1;
+    }
+ 
+    #about .socials {
+        margin-top: 10px;
+    }
+}
+
+@media (max-width: 768px) {
+    h1 { margin-top: 110px; }
+    #up-to {
+        flex-direction: column;
+        gap: 0;
+    }
+}
+ 
+@media (max-width: 600px) { 
+ 
+    #interests {
+        grid-template-columns: 1fr;
+        justify-items: center;
+    }
+ 
+    .interest {
+        width: 100%;
+        max-width: 300px;
+    }
+
+    .interest img {
+        aspect-ratio: 7 / 6;
+        object-position: 50% 70%;
+    }
 }

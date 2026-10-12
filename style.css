@@ -2,6 +2,7 @@ html {
     min-width: 320px;
     width: 100%; 
 }
+
 body {
     margin: 15px 150px 50px;
     font-family: 'Inter', sans-serif;
@@ -214,7 +215,7 @@ footer hr {
     h1 { font-size: 50px; }
     h2 { font-size: 28px; }
     h3 { font-size: 20px; }
-    a, p, .button, button  { font-size: 16px; }
+    li, a, p, .button, button  { font-size: 16px; }
 
     body { margin: 15px 100px 50px; }
 
