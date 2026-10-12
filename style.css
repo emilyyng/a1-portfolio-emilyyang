@@ -1,3 +1,7 @@
+html {
+    min-width: 320px;
+    width: 100%; 
+}
 body {
     margin: 15px 150px 50px;
     font-family: 'Inter', sans-serif;
@@ -229,6 +233,8 @@ footer hr {
 }
 
 @media (max-width: 550px) {
+    body { margin: 15px 60px 50px; }
+
     nav { border-radius: 16px; }
 
     nav ul {
@@ -246,4 +252,10 @@ footer hr {
 
 @media (max-width: 480px) {
     h1 { font-size: 40px; }
+    
+    nav { 
+        border-radius: 0px;
+        width: 100%; 
+        top: 0px;
+    }
 }
